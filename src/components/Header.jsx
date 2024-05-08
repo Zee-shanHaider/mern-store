@@ -37,7 +37,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="lg:px-10 px-2 py-4 border-red-300 border flex justify-between items-center">
+    <div className="lg:px-10 px-2 py-4 text-white flex justify-between items-center">
       <div className="lg:hidden">
         <TemporaryDrawer links={links} links2={links2} />
       </div>

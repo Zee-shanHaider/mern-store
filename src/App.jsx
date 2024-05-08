@@ -1,14 +1,10 @@
-import './App.css';
-import { MainLayout } from './layouts';
-
+import { MainLayout } from "./layouts";
+import { HomeScreen } from "./pages/home";
 function App() {
   return (
     <MainLayout>
-    <div className="App text-center">
-      <h1 className="text-red-500">This is Application</h1> 
-    </div>
+      <HomeScreen />
     </MainLayout>
-   
   );
 }
 
