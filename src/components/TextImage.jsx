@@ -17,9 +17,9 @@ const TextImage = ({ reverseAlignment, TextImageData }) => {
             {topText}
           </div>
         )}
-        <div className="md:text-3xl sm:w-full w-3/4 text-lg sm:text-lg  text-center font-bold">
+        <h3 className="md:text-3xl sm:w-full w-3/4 text-lg sm:text-lg  text-center font-bold">
           {headingText}
-        </div>
+        </h3>
         <p className="md:text-sm font-normal md:w-3/4 text-center">{text}</p>
         {linkObj && (
           <div className="mt-4">

@@ -1,12 +1,7 @@
 import React from "react";
-import { HomeBadge } from "../../components";
 
 const Shop = () => {
-  return (
-    <div>
-      <HomeBadge />
-    </div>
-  );
+  return <div className="flex">Shop</div>;
 };
 
 export default Shop;
