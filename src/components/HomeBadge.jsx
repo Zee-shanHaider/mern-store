@@ -1,22 +1,40 @@
 import React from "react";
-import HomeBadgeBG from "../assets/home/HomeBadgeBG.png";
-import Icon from "../assets/home/Icon.svg";
-const HomeBadge = () => {
+const HomeBadge = ({ badgeData }) => {
+  const { icon, heading, badgeImage, text, page, socialIcons } = badgeData;
   return (
     <>
-      <div className="w-full md:relative md:h-full flex flex-col text-white">
-        <img className="object-cover w-full h-full" src={HomeBadgeBG} alt="" />
-        <div className="bg-brown-100 flex flex-col gap-4 p-8 justify-center items-center md:w-1/4 h-full md:absolute md:left-[160px]">
-          <img src={Icon} alt="" srcset="" />
-          <p className="text-[#FFFDFB] text-base">
-            Handcrafted in Viet Nam since 1650
-          </p>
-          <div className="text-lg font-bold">
-            BAT TRANG <br /> DINNER SET
+      <div className="w-full md:relative md:h-full flex flex-col items-center text-white">
+        <img className="object-cover w-full h-full" src={badgeImage} alt="" />
+        <div
+          className={`flex flex-col gap-4 p-8 justify-center items-center md:w-1/4 w-full h-full md:absolute md:left-[160px] ${
+            page === "Contact" ? "bg-primary-100" : "bg-brown-100"
+          }`}
+        >
+          <img src={icon} alt="" srcset="" />
+          {page === "Home" && (
+            <p className="text-[#FFFDFB] text-base">{text}</p>
+          )}
+          <div className="md:text-2xl md:w-3/4 text-center text-lg font-semibold">
+            {heading}
+            {page === "Contact" && (
+              <hr class="my-2 h-0.5 border-t-0 bg-[#CAC9CF] " />
+            )}
           </div>
-          <button className="text-brown-100 md:mt-3 bg-white py-3 px-10 text-center cursor-pointer">
-            Shop Now
-          </button>
+          {page === "Contact" && (
+            <p className="text-[#FFFDFB] text-base">{text}</p>
+          )}
+          {page === "Contact" && (
+            <div className="flex gap-2">
+              {socialIcons.map((ele, index) => (
+                <img src={ele} key={index} alt="" srcset="" />
+              ))}
+            </div>
+          )}
+          {page === "Home" && (
+            <button className="text-brown-100 md:mt-3 bg-white py-3 px-10 text-center cursor-pointer">
+              Shop Now
+            </button>
+          )}
         </div>
       </div>
     </>

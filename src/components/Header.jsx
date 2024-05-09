@@ -14,6 +14,8 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 // import logo from '../assets/logo.png'
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
+import { Link } from "react-router-dom";
+
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const logos = [
@@ -25,9 +27,9 @@ const Header = () => {
 
   const links = [
     { text: "Home", icon: HomeIcon, url: "./" },
-    { text: "Shop", icon: ShoppingCartIcon, url: "./" },
-    { text: "About", icon: InfoOutlinedIcon, url: "./" },
-    { text: "Contact", icon: CallIcon, url: "./" },
+    { text: "Shop", icon: ShoppingCartIcon, url: "./shop" },
+    { text: "About", icon: InfoOutlinedIcon, url: "./about" },
+    { text: "Contact", icon: CallIcon, url: "./contact" },
   ];
 
   const links2 = [
@@ -37,18 +39,18 @@ const Header = () => {
   ];
 
   return (
-    <div className="lg:px-10 px-2 py-4 text-white flex justify-between items-center">
+    <div className="lg:px-10 px-2 py-3 mt-4 border-b border-primary-500 flex justify-between items-center">
       <div className="lg:hidden">
         <TemporaryDrawer links={links} links2={links2} />
       </div>
       <div>
         <img src={logo} alt="Logo" />
       </div>
-      <div className="lg:flex gap-4 justify-between hidden">
+      <div className="lg:flex gap-4 justify-between hidden sm:hidden md:block">
         {links.map((link, index) => (
-          <a key={index} href={link.url}>
+          <Link key={index} to={link.url}>
             {link.text}
-          </a>
+          </Link>
         ))}
       </div>
       <div className="flex gap-4">

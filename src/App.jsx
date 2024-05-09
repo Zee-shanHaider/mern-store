@@ -1,11 +1,6 @@
 import { MainLayout } from "./layouts";
-import { HomeScreen } from "./pages/home";
 function App() {
-  return (
-    <MainLayout>
-      <HomeScreen />
-    </MainLayout>
-  );
+  return <MainLayout></MainLayout>;
 }
 
 export default App;
