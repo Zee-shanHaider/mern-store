@@ -3,9 +3,9 @@ import { Filters, Products } from "./components";
 
 const Shop = () => {
   return (
-    <div className="md:p-16 p-4">
-      <div className="text-sm font-semibold pb-10">Showing 120 items</div>
-      <div className="flex gap-8 justify-between">
+    <div className="md:px-16 md:py-8 p-6">
+      <div className="text-sm font-semibold pb-6">Showing 120 items</div>
+      <div className="flex gap-16 justify-between">
         <Filters />
         <Products />
       </div>
