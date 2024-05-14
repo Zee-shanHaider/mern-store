@@ -46,7 +46,7 @@ const Header = () => {
       <div>
         <img src={logo} alt="Logo" />
       </div>
-      <div className="lg:flex gap-4 justify-between hidden sm:hidden md:block">
+      <div className="lg:flex gap-4 justify-between hidden md:hidden md:block">
         {links.map((link, index) => (
           <Link key={index} to={link.url}>
             {link.text}

@@ -1,12 +1,21 @@
 import React from "react";
 import SellerCardImg from "../../../assets/home/SellerCards/Image.png";
 import BaseButton from "../../../components/buttons/BaseButton";
-
+import { useNavigate } from "react-router-dom";
 const SellerCard = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col">
-      <img className="w-full h-full" src={SellerCardImg} alt="" />
-      <div className="font-semibold text-sm mt-4">
+      <img
+        className="w-full h-full"
+        onClick={() => navigate("/product/1")}
+        src={SellerCardImg}
+        alt=""
+      />
+      <div
+        onClick={() => navigate("product/1")}
+        className="font-semibold text-sm mt-4"
+      >
         Small Ecru Ceramic Compote
       </div>
       <div className="font-semibold text-sm">$49.50</div>

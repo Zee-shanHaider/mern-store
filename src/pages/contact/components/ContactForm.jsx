@@ -1,6 +1,6 @@
 import React from "react";
 import ArrowButton from "../../../components/buttons/ArrowButton";
-
+import ArrowRight from "../../../assets/ArrowRight.svg";
 const ContactForm = () => {
   const fields = [
     {
@@ -63,7 +63,11 @@ const ContactForm = () => {
         </div>
       ))}
       <div class="col-span-2">
-        <ArrowButton text={"Send Message"} ContactButton={true} />
+        <ArrowButton
+          text={"Send Message"}
+          ContactButton={true}
+          ArrowRight={ArrowRight}
+        />
       </div>
     </form>
   );
