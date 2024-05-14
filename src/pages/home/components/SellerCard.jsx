@@ -13,7 +13,7 @@ const SellerCard = () => {
         alt=""
       />
       <div
-        onClick={() => navigate("product/1")}
+        onClick={() => navigate("/product/1")}
         className="font-semibold text-sm mt-4"
       >
         Small Ecru Ceramic Compote
