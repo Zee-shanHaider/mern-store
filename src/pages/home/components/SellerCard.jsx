@@ -7,14 +7,14 @@ const SellerCard = () => {
   return (
     <div className="flex flex-col">
       <img
-        className="w-full h-full"
+        className="w-full h-full cursor-pointer"
         onClick={() => navigate("/product/1")}
         src={SellerCardImg}
         alt=""
       />
       <div
         onClick={() => navigate("/product/1")}
-        className="font-semibold text-sm mt-4"
+        className="font-semibold text-sm mt-4 cursor-pointer"
       >
         Small Ecru Ceramic Compote
       </div>

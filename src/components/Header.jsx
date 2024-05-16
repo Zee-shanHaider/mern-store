@@ -14,15 +14,15 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 // import logo from '../assets/logo.png'
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const logos = [
-    { src: search, visible: false },
-    { src: avatar, visible: false },
-    { src: heart, visible: false },
-    { src: cart, visible: true },
+    { src: search, visible: false, link: "#" },
+    { src: avatar, visible: false, link: "#" },
+    { src: heart, visible: false, link: "#" },
+    { src: cart, visible: true, link: "/cart" },
   ];
 
   const links = [
@@ -38,13 +38,15 @@ const Header = () => {
     { text: "Logout", icon: AccountCircleOutlinedIcon, url: "./" },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <div className="lg:px-10 px-2 py-3 mt-4 border-b border-primary-500 flex justify-between items-center">
       <div className="lg:hidden">
         <TemporaryDrawer links={links} links2={links2} />
       </div>
       <div>
-        <img src={logo} alt="Logo" />
+        <img src={logo} onClick={() => navigate("/")} alt="Logo" />
       </div>
       <div className="lg:flex gap-4 justify-between hidden md:hidden md:block">
         {links.map((link, index) => (
@@ -59,6 +61,7 @@ const Header = () => {
             key={index}
             src={item.src}
             alt=""
+            onClick={() => navigate(`${item.link}`)}
             className={`${
               !item.visible ? "hidden" : "block"
             } lg:block cursor-pointer`}

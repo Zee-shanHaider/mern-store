@@ -47,7 +47,7 @@ const Footer = () => {
             Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
             mauris sed ma
           </p>
-          <ArrowButton text={"GET STARTED"} ArrowRight={ArrowRight} />
+          <ArrowButton text={"GET STARTED"} showArrow={true} />
         </div>
         <div className="col-span-2 p-3 gap-2 md:gap-2 grid grid-cols-2 md:grid-cols-3">
           {footerLinks.map((section, index) => (

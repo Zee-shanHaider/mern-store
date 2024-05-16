@@ -1,6 +1,7 @@
 import React from "react";
 import ArrowButton from "../../../components/buttons/ArrowButton";
 import ArrowRight from "../../../assets/ArrowRight.svg";
+import ReturnButton from "./ReturnButton";
 const ContactForm = () => {
   const fields = [
     {
@@ -62,11 +63,12 @@ const ContactForm = () => {
           )}
         </div>
       ))}
-      <div class="col-span-2">
+      <div class="flex justify-between">
+        <ReturnButton />
         <ArrowButton
           text={"Send Message"}
           ContactButton={true}
-          ArrowRight={ArrowRight}
+          showArrow={true}
         />
       </div>
     </form>

@@ -12,6 +12,8 @@ import { MainLayout } from './layouts';
 import Shop from './pages/shop/Shop';
 import Contact from './pages/contact/Contact';
 import Product from './pages/product/Product';
+import Cart from './pages/cart/Cart';
+import Checkout from './pages/checkout/Checkout';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
         {
           path: "product/:id",
           element: <Product/>
+        },
+        {
+          path: "cart",
+          element: <Cart/>
+        },
+        {
+          path: "checkout",
+          element: <Checkout/>
         },
     ]
   },
