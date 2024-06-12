@@ -39,7 +39,7 @@ const Filters = () => {
                         id={ele}
                         type="checkbox"
                         value={ele}
-                        className="w-5 h-5 rounded-none cursor-pointer bg-gray-100 border-gray-300 text-primary-600"
+                        className="w-5 h-5 rounded-none cursor-pointer focus:outline-none bg-gray-100 border-gray-300 text-primary-600"
                       />
                       <label
                         htmlFor={ele}

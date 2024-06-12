@@ -30,7 +30,7 @@ const FormField = ({
       <input
         type={type}
         id={id}
-        className="bg-gray-50 border outline-none w-full border-primary-100 text-gray-900 text-sm p-2.5"
+        className="bg-gray-50 placeholder:text-xs border outline-none w-full border-primary-100 text-gray-900 text-sm p-2.5"
         placeholder={placeholder}
         {...register(name, { valueAsNumber })}
       />

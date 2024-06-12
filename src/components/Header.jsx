@@ -13,7 +13,7 @@ import SearchIcon from "@mui/icons-material/SearchOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 // import logo from '../assets/logo.png'
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-
+import Login from "../components/dialogs/Login";
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -48,6 +48,7 @@ const Header = () => {
       <div>
         <img src={logo} onClick={() => navigate("/")} alt="Logo" />
       </div>
+      <Login />
       <div className="lg:flex gap-4 justify-between hidden md:hidden md:block">
         {links.map((link, index) => (
           <Link key={index} to={link.url}>

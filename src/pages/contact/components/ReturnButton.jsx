@@ -2,12 +2,10 @@ import React from "react";
 import ReturnArrow from "../../../assets/ReturnArrow.svg";
 const ReturnButton = () => {
   return (
-    <>
-      <button className="flex gap-2">
-        <img src={ReturnArrow} alt="Return Arrow" srcset="" />
-        <span className="text-sm">Back to Cart</span>
-      </button>
-    </>
+    <button className="flex items-center gap-2 p-4 mx-auto md:mx-0">
+      <img src={ReturnArrow} alt="Return Arrow" srcset="" />
+      <span className="text-sm">RETURN TO CART</span>
+    </button>
   );
 };
 

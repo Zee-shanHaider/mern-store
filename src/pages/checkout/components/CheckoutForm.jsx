@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import FormField from "../../../components/FormInput";
 import ArrowButton from "../../../components/buttons/ArrowButton";
+import ReturnButton from "../../contact/components/ReturnButton";
 
 function Form() {
   const {
@@ -109,7 +110,7 @@ function Form() {
     <div className="flex flex-col md:w-2/3 ">
       <div className="font-semibold">Billing Details</div>
       <form
-        className="grid gap-4 md:grid-cols-2 p-6"
+        className="md:grid gap-4 flex flex-col p-4 md:grid-cols-2"
         onSubmit={handleSubmit(onSubmit)}
       >
         <>
@@ -142,13 +143,18 @@ function Form() {
             )
           )}
         </>
-        <div className="flex flex-col md:flex-row md:justify-between">
-          <ArrowButton
-            text="CONTINUE TO SHIPPING"
-            ContactButton={true}
-            showArrow={true}
-            buttonType={SubmitEvent} // Assuming SubmitEvent is defined
-          />
+        <div className="md:flex col-span-2 flex-col gap-4 md:flex-row md:justify-between">
+          <div className="md:w-3/4 w-full">
+            <ReturnButton />
+          </div>
+          <div className="md:w-3/4 w-full">
+            <ArrowButton
+              text="CONTINUE TO SHIPPING"
+              ContactButton={true}
+              showArrow={true}
+              buttonType={SubmitEvent} // Assuming SubmitEvent is defined
+            />
+          </div>
         </div>
       </form>
     </div>

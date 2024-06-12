@@ -17,7 +17,7 @@ const HomeBadge = ({ badgeData }) => {
           <h3 className="md:text-2xl md:w-3/4 text-center text-lg font-semibold">
             {heading}
             {page === "Contact" && (
-              <hr class="my-2 h-0.5 border-t-0 bg-[#CAC9CF] " />
+              <hr className="my-2 h-0.5 border-t-0 bg-[#CAC9CF] " />
             )}
           </h3>
           {page === "Contact" && (

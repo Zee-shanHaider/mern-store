@@ -1,6 +1,5 @@
 import React from "react";
 import ArrowButton from "../../../components/buttons/ArrowButton";
-import ArrowRight from "../../../assets/ArrowRight.svg";
 import ReturnButton from "./ReturnButton";
 const ContactForm = () => {
   const fields = [
@@ -36,7 +35,7 @@ const ContactForm = () => {
       {fields.map((field) => (
         <div
           key={field.id}
-          className={` ${field.id === "message" ? "md:col-span-2" : ""}`}
+          className={`w-full ${field.id === "message" ? "md:col-span-2" : ""}`}
         >
           <label
             htmlFor={field.id}
@@ -56,15 +55,14 @@ const ContactForm = () => {
             <input
               type={field.type}
               id={field.id}
-              className="bg-gray-50 border outline-none w-full border-gray-300 text-gray-900 text-sm p-2.5"
+              className="bg-gray-50 border  outline-none w-full border-gray-300 text-gray-900 text-sm p-2.5"
               placeholder={field.placeholder}
               required
             />
           )}
         </div>
       ))}
-      <div class="flex justify-between">
-        <ReturnButton />
+      <div className="flex justify-between col-span-2">
         <ArrowButton
           text={"Send Message"}
           ContactButton={true}

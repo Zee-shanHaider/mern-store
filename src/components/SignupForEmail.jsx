@@ -12,7 +12,7 @@ const SignupForEmail = () => {
       </div>
       <form className="md:w-1/3 w-3/4 mx-auto py-2" action="">
         <input
-          class="w-full text-center text-base py-2 border-b border-gray-500 focus:outline-none"
+          className="w-full text-center text-base py-2 border-b border-gray-500 focus:outline-none"
           type=""
           placeholder="Enter your email address"
         />
